@@ -22,18 +22,21 @@ class ViewController: UIViewController {
 
     @IBAction func totalling(_ sender: Any) {
         
+        //textFieldをアンラップ
         guard let text1 = textField1.text else {return}
         guard let text2 = textField2.text else {return}
         guard let text3 = textField3.text else {return}
         guard let text4 = textField4.text else {return}
         guard let text5 = textField5.text else {return}
         
+        //textに入った数字を代入なにも入っていなければ0を代入
         let number1 = Int(text1) ?? 0
         let number2 = Int(text2) ?? 0
         let number3 = Int(text3) ?? 0
         let number4 = Int(text4) ?? 0
         let number5 = Int(text5) ?? 0
-    
+        
+        
         let total = number1 + number2 + number3 + number4 + number5
         
         results.text = String(total)
